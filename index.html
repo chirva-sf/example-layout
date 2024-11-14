@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пример HTML/CSS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=1.1">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <ul class="header-nav">
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#portfolio">Портфолио</a></li>
+          <li><a href="#pricing">Стоимость</a></li>
+        </ul>
+      </nav>
+      <div class="callback">
+        <p>+7 (499) 995-77-77</p>
+        <button class="light-button open-callback">Заказать звонок</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="frontend-developer">
+    <div class="container">
+      <h1>NOVASOFT</h1>
+      <p>ИТ-решения и бизнес-услуги</p>
+      <button class="dark-button">Узнать больше</button>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="container">
+      <h2>Что мы делаем</h2>
+      <ul class="service-list">
+        <li><h3>Создание лендинг-страниц и сайтов любой сложности</h3></li>
+        <li><h3>Адаптивная верстка под все браузеры и устройства</h3></li>
+        <li><h3>Frontend-разработка и программирование</h3></li>
+        <li><h3>Исправление и доработка существующей верстки</h3></li>
+      </ul>
+      <button class="light-button">Узнать стоимость</button>
+    </div>
+  </section>
+
+  <section class="portfolio">
+    <div class="container">
+      <h2>Примеры работ</h2>
+      <ul class="portfolio-list">
+        <li class="portfolio-item">
+          <a href="#">
+            <div><img src="img/work1.png" alt="Work 1"></div>
+            <h3>Сайт туристического агенства</h3>
+          </a>
+        </li>
+        <li class="portfolio-item">
+          <a href="#">
+            <div><img src="img/work2.png" alt="Work 2"></div>
+            <h3>Сайт транспортной компании</h3>
+          </a>
+        </li>
+        <li class="portfolio-item">
+          <a href="#">
+            <div><img src="img/work3.png" alt="Work 3"></div>
+            <h3>Сайт строительной компании</h3>
+          </a>
+        </li>
+      </ul>
+      <button class="light-button">Заказать проект</button>
+    </div>
+  </section>
+
+  <section class="pricing">
+    <div class="container">
+      <h2>Адаптивная верстка под все устройства и браузеры <u>от 2000 ₽ всего за 8 часов*</u></h2>
+      <p class="disclaimer">* Срок и стоимость могут отличаться от заявленных и рассчитываются <u>индивидуально, в зависимости от сложности задач.</u></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <nav>
+        <ul class="footer-nav">
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#portfolio">Портфолио</a></li>
+          <li><a href="#pricing">Стоимость</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <a href="mailto:info@schirva.ru" title="Написать на почту">info@schirva.ru</a>
+        <a href="tel:+74999957755" title="Позвонить">+7 (499) 995 77 77</a>
+      </div>
+      <div class="footer-social">
+        <button class="light-button open-callback">Заказать звонок</button>
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="popup-container popup-callback">
+    <div>
+      <h2>Заказ обратного звонка</h2>
+      <form action="#" method="POST">
+        <div class="row required">
+          <label>Ваше имя:</label>
+          <input type="text" name="first-name" placeholder="Имя, отчетство (по желанию)">
+        </div>
+        <div class="row required">
+          <label>Телефон:</label>
+          <input type="text" name="first-name" placeholder="Введите ваш телефон" class="phone">
+        </div>
+        <div class="row">
+          <label>Email:</label>
+          <input type="text" name="first-name" placeholder="Введите ваш email">
+        </div>
+        <input type="submit" value="Отправить">
+      </form>
+      <span class="fa fa-close popup-close"></span>
+    </div>
+  </div>
+
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+  <script src="js/script.js?v=1.1"></script>
+</body>
+</html>

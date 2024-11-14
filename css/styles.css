@@ -1,0 +1,537 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-size: 16px;
+  background-color: #f8f9fb;
+  color: #333;
+}
+
+/* Макет */
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 40px auto;
+  padding: 40px;
+  text-align: left;
+}
+
+header .container {
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .callback {
+  display: flex;
+  align-items: center;
+}
+
+.frontend-developer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  min-height: 450px;
+}
+
+.service-list, .portfolio-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  list-style: none;
+}
+
+.service-list > li {
+  display: flex;
+  align-items: end;
+  width: calc(25% - 35px);
+  min-height: 12em;
+}
+
+.service-list > li:nth-child(1) {
+  background: url('../img/img1.png') no-repeat left top;
+  background-size: auto 70%;
+}
+
+.service-list > li:nth-child(2) {
+  background: url('../img/img2.png') no-repeat left top;
+  background-size: auto 70%;
+}
+
+.service-list > li:nth-child(3) {
+  background: url('../img/img3.png') no-repeat left top;
+  background-size: auto 70%;
+}
+
+.service-list > li:nth-child(4) {
+  background: url('../img/img4.png') no-repeat left top;
+  background-size: auto 70%;
+}
+
+.portfolio-list .portfolio-item {
+  width: calc(33.33% - 30px);
+}
+
+.pricing .container {
+  background-color: #3f2aff;
+  color: white;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Стилизация общих элементов страницы */
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 0.42em;
+}
+
+h2 {
+  font-size: 2.2em;
+  margin-bottom: 1.42em;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.4em;
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  color: #3f2aff;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background-color: #3f2aff;
+  transition: width 0.4s ease, left 0.4s ease;
+}
+
+a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+button {
+  padding: 0.63em 2.8em;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+button.light-button {
+  background-color: transparent;
+  border: 1px solid #333;
+}
+
+button.light-button:hover {
+  color: #fff;
+  background-color: #3f2aff;
+  border: 1px solid #3f2aff;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+button.dark-button {
+  background-color: #3f2aff;
+  border: 1px solid #3f2aff;
+  color: white;
+}
+
+button.dark-button:hover {
+  color: #000;
+  background-color: #9aeee7;
+  border: 1px solid #333;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+/* Закрепление меню сверху */
+
+header .container {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f6f7f9;
+  z-index: 10;
+}
+
+section.frontend-developer {
+  margin-top: 176px;
+}
+
+/* Стилизация отдельных элементов страницы */
+
+ul.header-nav li {
+  margin-right: 1.5em;
+  font-size: 1.1em;
+}
+
+header .callback p {
+  margin-right: 1.5em;
+}
+
+.frontend-developer .container {
+  background: url('../img/home.png') no-repeat right center / contain;
+}
+
+.frontend-developer p {
+  margin-bottom: 1.7em;
+  font-size: 1.1em;
+}
+
+.portfolio-item a {
+  display: block;
+}
+
+.portfolio-item div {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #333;
+  border-radius: 15px;
+  margin-bottom: 1em;
+}
+
+.portfolio-item div img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-item a:hover img {
+  transform: scale(1.15);
+}
+
+.pricing .container > * {
+  margin-right: 50%;
+}
+
+.pricing u {
+  display: block;
+  text-decoration: none;
+}
+
+.pricing .disclaimer {
+  margin-bottom: 1.8rem;
+  font-size: 0.7em;
+  font-weight: 300;
+}
+
+ul.footer-nav {
+  flex-direction: column;
+}
+
+ul.footer-nav li {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+
+.footer-contact a {
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.footer-social ul {
+  padding-top: 2em;
+}
+
+.footer-social ul li {
+  font-size: 1.2em;
+  margin: 0 0.8em;
+}
+
+.footer-social ul a::before {
+  content: none;
+}
+
+/* Popup callback */
+
+.popup-container {
+  display: none;
+  background: #000000cc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.popup-container > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f6f7f9;
+  padding: 40px;
+  width: 90%;
+  max-width: 700px;
+  height: auto;
+  max-height: 90%;
+}
+
+.popup-container .popup-close {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.popup-callback h2 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.popup-callback .row label {
+  display: block;
+  width: 30%;
+  float: left;
+  font-size: 1em;
+  line-height: 2.3125em;
+}
+
+.popup-callback .row input {
+  display: block;
+  width: 70%;
+  float: left;
+  font-size: 1em;
+  padding: 8px 13px;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
+
+.popup-callback .row {
+  margin-bottom: 1em;
+}
+
+.popup-callback .row:last-of-type {
+  margin-bottom: 2em;
+}
+
+.popup-callback .row::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.row.required label:before {
+  content: '* ';
+  color: #F00;
+  font-weight: bold;
+}
+
+.popup-callback input[type="submit"] {
+  padding: 10px 45px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.popup-callback input[type="submit"] {
+  background-color: #3f2aff;
+  border: 1px solid #3f2aff;
+  color: white;
+}
+
+.popup-callback input[type="submit"]:hover {
+  color: #000;
+  background-color: #9aeee7;
+  border: 1px solid #333;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Mobile version (немного настроек) */
+
+/* Большие смартфоны */
+@media (max-width: 767px) {
+
+  header .container, section:not(.pricing) .container, footer .container {
+    margin: 0;
+    flex-direction: column;
+  }
+
+  section.frontend-developer .container {
+    margin-top: 163px;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5em;
+  }
+
+  ul.header-nav li {
+    margin: 0 1em;
+  }
+
+  header .callback {
+    justify-content: center;
+  }
+
+  .frontend-developer .container {
+    background: none;
+    min-height: auto;
+    align-items: center;
+  }
+
+  .frontend-developer p::after {
+    content: "";
+    display: block;
+    width: 120%;
+    margin-left: -10%;
+    min-height: 350px;
+    background: url('../img/home.png') no-repeat center center / contain;
+    margin-top: 1.5em;
+  }
+
+  .service-list, .portfolio-list {
+    flex-direction: column;
+    justify-content: start;
+    margin-bottom: 1em;
+  }
+
+  .service-list > li, .portfolio-list > li {
+    width: 100% !important;
+    margin-bottom: 1.5em;
+  }
+
+  .pricing .container > * {
+    width: 100%;
+  }
+
+  .pricing .disclaimer u {
+    display: inline;
+  }
+
+  footer .container > * {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+}
+
+/* Обычные смартфоны */
+@media (max-width: 480px) {
+
+  html, body {
+    font-size: 15px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 9.3vw;
+  }
+
+  h2 {
+    font-size: 1.7em;
+  }
+
+  header nav {
+    margin-bottom: 1em;
+  }
+
+  header .callback {
+    flex-direction: column;
+  }
+
+  header .callback p {
+    margin: 0 0 1em;
+  }
+
+  ul.header-nav li {
+    margin: 0 0.7em;
+  }
+
+  section.frontend-developer {
+    margin-top: 146px;
+  }
+
+  .frontend-developer p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .frontend-developer p::after {
+    width: calc(100vw - 50px);
+    margin-left: 0;
+    min-height: 270px;
+  }
+
+  .popup-container > div {
+    padding: 25px;
+  }
+
+  .popup-callback h2 {
+    font-size: 5.3vw;
+  }
+
+  .popup-callback .row label, .popup-callback .row input {
+    width: 100%;
+  }
+
+}
+
+/* Маленькие экраны (старые смартфоны) */
+@media (max-width: 320px) {
+
+  html, body {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  ul.header-nav li {
+    margin: 0 0.5em;
+  }
+
+  .frontend-developer p::after {
+    min-height: 230px;
+  }
+
+}
